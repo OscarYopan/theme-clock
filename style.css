@@ -6,9 +6,23 @@
 }
 
 /*Default*/
+:root {
+  --cor1: #327361;
+  --cor2: #D98014;
+  --cor3: #D9A25F;
+  --cor4: #F2F2F2;
+  --cor5: #0D0D0D;
+}
+
 html{
   font-family: 'Roboto', sans-serif;
   font-size: 62.5%;
+  transition: all 0.5s ease-in;
+}
+
+html.dark {
+  background-color: var(--cor5);
+  color: var(--cor4);
 }
 
 body{
@@ -19,3 +33,109 @@ body{
   height: 100vh;
   overflow: hidden;
 }
+
+.toggle {
+  background-color: var(--cor5);
+  color: var(--cor4);
+  font-size: 1.8rem;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.toggle i {
+  margin-right: 1rem;
+}
+
+.toggle:focus {
+  outline: none;
+}
+
+.toggle:hover {
+  opacity: 75%;
+}
+
+.toggle:active {
+  transform: scale(0.98);
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.clock {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  margin-bottom: 4rem;
+  border: .5rem solid black;
+  border-radius: 50%;
+  background-color: var(--cor1);
+}
+
+.needle {
+  background-color: var(--cor5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 6.5rem;
+  width: .3rem;
+  transform-origin: bottom center;
+}
+
+.needle.hour {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.needle.minute {
+  transform: translate(-50%, -100%) rotate(30deg);
+  height: 9rem;
+}
+
+.needle.second {
+  transform: translate(-50%, -100%) rotate(110deg);
+  height: 9rem;
+  background-color: var(--cor2);
+}
+
+.center-point {
+  background-color: var(--cor5);
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.time {
+  font-size: 6rem;
+}
+
+.date {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.date .circle {
+  background-color: var(--cor5);
+  color: var(--cor4);
+  border-radius: .5rem;
+  padding: 0 .5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.8rem;
+  transition: all .5s ease-in;
+}
+
