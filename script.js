@@ -6,8 +6,8 @@ const date = document.querySelector('.date')
 const toggle = document.querySelector('.toggle')
 const icone = document.getElementById('icone')
 
-const days = ['Segunda-Feira', 'Terça-Feira', 'Quarta-feira', 'Quinta-Feira', 
-'Sexta-feira', 'Sábado', 'Domingo'];
+const days = ['Domingo', 'Segunda-Feira', 'Terça-Feira', 'Quarta-feira', 'Quinta-Feira', 
+'Sexta-feira', 'Sábado'];
 const months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 
 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 
