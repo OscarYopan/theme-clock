@@ -39,6 +39,7 @@ function setTime() {
 
   timeEl.innerHTML = `${hours}:${minutes < 10 ? minutes = `0${minutes}` : minutes} ${amPm}`
   date.innerHTML = `${days[day]}, ${day} de ${months[month]} de ${year}`
+    
 }
 
 
