@@ -26,6 +26,7 @@ function setTime() {
   const time = new Date()
   const month = time.getMonth()
   const day = time.getDay()
+  const dateDay = time.getDate()
   const year = time.getFullYear()
   const hours = time.getHours()
   const hoursForClock = hours % 12
@@ -38,7 +39,7 @@ function setTime() {
   secondEl.style.transform = `translate(-50%, -100%) rotate(${scale(seconds, 0, 59, 0, 360)}deg)`
 
   timeEl.innerHTML = `${hours}:${minutes < 10 ? minutes = `0${minutes}` : minutes} ${amPm}`
-  date.innerHTML = `${days[day]}, ${day} de ${months[month]} de ${year}`
+  date.innerHTML = `${days[day]}, ${dateDay} de ${months[month]} de ${year}`
     
 }
 
